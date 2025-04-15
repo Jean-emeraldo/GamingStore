@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AppWeb</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AppWeb.styles.css" asp-append-version="true" />
+    <style>
+        /* Style pour la boîte de dialogue personnalisée */
+        #customDialog {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: black;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+        }
+        #customDialog p {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        #customDialog button {
+            margin-right: 10px;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        #confirmLogout {
+            background-color: #dc3545;
+            color: white;
+        }
+        #cancelLogout {
+            background-color: #6c757d;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Boîte de dialogue personnalisée -->
+    <div id="customDialog">
+        <p>Voulez-vous vraiment vous déconnecter ?</p>
+        <button id="confirmLogout">OK</button>
+        <button id="cancelLogout">Annuler</button>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        // Gestion de la déconnexion avec boîte de dialogue personnalisée
+        document.getElementById('deconnecter').addEventListener('click', function(event) {
+            event.preventDefault(); // Empêche le comportement par défaut du lien
+            document.getElementById('customDialog').style.display = 'block';
+        });
+
+        // Gestion du bouton "OK"
+        document.getElementById('confirmLogout').addEventListener('click', function() {
+            window.location.href = 'https://www.google.com'; // Remplacez par votre URL de déconnexion
+        });
+
+        // Gestion du bouton "Annuler"
+        document.getElementById('cancelLogout').addEventListener('click', function() {
+            document.getElementById('customDialog').style.display = 'none';
+        });
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,469 @@
+{
+  "Files": [
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/obj/Debug/net9.0/scopedcss/projectbundle/AppWeb.bundle.scp.css",
+      "PackagePath": "staticwebassets/AppWeb.m2he9sn7z4.bundle.scp.css"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/css/site1.css",
+      "PackagePath": "staticwebassets/css/site1.css"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/css/site2.css",
+      "PackagePath": "staticwebassets/css/site2.css"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/backend/.env",
+      "PackagePath": "staticwebassets/images/MyPortofolio/backend/.env"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/backend/MyPortofolio.code-workspace",
+      "PackagePath": "staticwebassets/images/MyPortofolio/backend/MyPortofolio.code-workspace"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/backend/config/db.js",
+      "PackagePath": "staticwebassets/images/MyPortofolio/backend/config/db.js"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/backend/package-lock.json",
+      "PackagePath": "staticwebassets/images/MyPortofolio/backend/package-lock.json"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/backend/package.json",
+      "PackagePath": "staticwebassets/images/MyPortofolio/backend/package.json"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/backend/routes/contact.js",
+      "PackagePath": "staticwebassets/images/MyPortofolio/backend/routes/contact.js"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/backend/server.js",
+      "PackagePath": "staticwebassets/images/MyPortofolio/backend/server.js"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/Image/a.jpeg",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/Image/a.jpeg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/Image/b.jpeg",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/Image/b.jpeg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/Image/bg.jpg",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/Image/bg.jpg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/Image/c.jpeg",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/Image/c.jpeg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/Image/close.png",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/Image/close.png"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/Image/e.png",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/Image/e.png"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/Image/f.png",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/Image/f.png"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/Image/g.jpg",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/Image/g.jpg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/Image/img1.jpg",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/Image/img1.jpg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/Image/menu.png",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/Image/menu.png"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/Image/work1.jpg",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/Image/work1.jpg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/Image/work2.jpg",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/Image/work2.jpg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/Image/work3.jpg",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/Image/work3.jpg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/Image/work4.jpg",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/Image/work4.jpg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/Image/work5.jpg",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/Image/work5.jpg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/Image/work6.jpg",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/Image/work6.jpg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/README.md",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/README.md"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/Video/a.mp4",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/Video/a.mp4"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/Video/b.mp4",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/Video/b.mp4"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/Video/c.mp4",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/Video/c.mp4"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/index.html",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/index.html"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/MyPortofolio/frontend/style.css",
+      "PackagePath": "staticwebassets/images/MyPortofolio/frontend/style.css"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/facebook.png",
+      "PackagePath": "staticwebassets/images/facebook.png"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/google.png",
+      "PackagePath": "staticwebassets/images/google.png"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/instagram.png",
+      "PackagePath": "staticwebassets/images/instagram.png"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/pc1.jpg",
+      "PackagePath": "staticwebassets/images/pc1.jpg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/pc10.jpg",
+      "PackagePath": "staticwebassets/images/pc10.jpg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/pc11.jpg",
+      "PackagePath": "staticwebassets/images/pc11.jpg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/pc2.jpg",
+      "PackagePath": "staticwebassets/images/pc2.jpg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/pc3.jpg",
+      "PackagePath": "staticwebassets/images/pc3.jpg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/pc4.jpg",
+      "PackagePath": "staticwebassets/images/pc4.jpg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/pc5.jpg",
+      "PackagePath": "staticwebassets/images/pc5.jpg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/pc6.jpg",
+      "PackagePath": "staticwebassets/images/pc6.jpg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/pc7.jpg",
+      "PackagePath": "staticwebassets/images/pc7.jpg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/pc8.jpg",
+      "PackagePath": "staticwebassets/images/pc8.jpg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/pc9.jpg",
+      "PackagePath": "staticwebassets/images/pc9.jpg"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/images/twitter.png",
+      "PackagePath": "staticwebassets/images/twitter.png"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/js/carousel.js",
+      "PackagePath": "staticwebassets/js/carousel.js"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/LICENSE",
+      "PackagePath": "staticwebassets/lib/bootstrap"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/jquery/dist/jquery.slim.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.js"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/jquery/dist/jquery.slim.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.min.js"
+    },
+    {
+      "Id": "/home/homme/Documents/AppWeb2-main/wwwroot/lib/jquery/dist/jquery.slim.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.min.map"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.AppWeb.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.AppWeb.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.build.AppWeb.props",
+      "PackagePath": "build\\AppWeb.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildMultiTargeting.AppWeb.props",
+      "PackagePath": "buildMultiTargeting\\AppWeb.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildTransitive.AppWeb.props",
+      "PackagePath": "buildTransitive\\AppWeb.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

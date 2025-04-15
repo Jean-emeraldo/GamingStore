@@ -1,0 +1,143 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/site2.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Vente de PC Professionnels</title>
+
+    
+</head>
+
+<body>
+
+    <!-- Navbar -->
+<nav class="navbar">
+    <div class="navbar-container">
+
+        <!-- Lien Home avec icône -->
+        <a href="@Url.Action("NewPage", "Product")" class="navbar-brand">
+            <i class="fas fa-home" style="margin-right: 5px;"></i> Home
+        </a>
+
+        <!-- Menu -->
+        <ul class="navbar-menu">
+            <li>
+                <a href="@Url.Action("Apropos", "Product")">
+                    <i class="fas fa-info-circle" style="margin-right: 5px;"></i> À propos
+                </a>
+            </li>
+            <li>
+                <a href="@Url.Action("Index", "Product")">
+                    <i class="fas fa-box-open" style="margin-right: 5px;"></i> Produits
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+
+    <section class="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>À PROPOS DE NOTRE ENTREPRISE</h2>
+                <p>
+                    Nous proposons une large gamme de PC professionnels, adaptés à tous les besoins : travail, gaming, création de contenu et plus encore.  
+                    Nos solutions informatiques sont conçues pour offrir des performances optimales et une fiabilité à long terme.  
+                    Faites confiance à notre expertise pour équiper votre entreprise avec les meilleurs outils technologiques.
+                </p>
+            </div>
+            <img src="~/images/pc6.jpg" alt="Équipe" class="about-image" />
+        </div>
+    </section>
+ 
+
+
+    <section class="services">
+        <h2>NOS SERVICES</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <img src="~/images/pc3.jpg" alt="Professionnels" />
+                <h3>Pour les professionnels</h3>
+                <p>Des solutions de pointe pour répondre aux besoins des entreprises en matière de performance informatique.</p>
+            </div>
+            <div class="service-item">
+                <img src="~/images/pc3.jpg" alt="Jeux et performance" />
+                <h3>Pour le gaming et la performance</h3>
+                <p>Des configurations puissantes pour une expérience de jeu optimale et un multitâche sans limite.</p>
+            </div>
+            <div class="service-item">
+                <img src="~/images/pc3.jpg" alt="Startups et PME" />
+                <h3>Pour les startups et PME</h3>
+                <p>Des solutions sur mesure adaptées aux petites et moyennes entreprises pour booster la productivité.</p>
+            </div>
+            <div class="service-item">
+                <img src="~/images/pc3.jpg" alt="Créateurs de contenu" />
+                <h3>Pour les créateurs de contenu</h3>
+                <p>Des PC optimisés pour le montage vidéo, la création graphique et le streaming.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="trusted">
+        <p>Notre partenaires  </p>
+    <div class="partenaires">
+    <i class="fab fa-google" title="Partenaire 1" style="font-size: 32px; margin-right: 10px;"></i>
+    <i class="fab fa-facebook" title="Partenaire 2" style="font-size: 32px; margin-right: 10px;"></i>
+    <i class="fab fa-instagram" title="Partenaire 3" style="font-size: 32px; margin-right: 10px;"></i>
+    <i class="fab fa-twitter" title="Partenaire 4" style="font-size: 32px; margin-right: 10px;"></i>
+    </div>
+
+    </section>
+
+
+    <section class="hero">
+        <div class="hero-carousel">
+            <img src="~/images/pc1.jpg" alt="PC Professionnel 1" class="hero-image"/>
+            <img src="~/images/pc2.jpg" alt="PC Professionnel 2" class="hero-image"/>
+            <img src="~/images/pc3.jpg" alt="PC Professionnel 3" class="hero-image"/>
+            <img src="~/images/pc4.jpg" alt="PC Professionnel 4" class="hero-image"/>
+        </div>
+    </section>
+
+ 
+    <section class="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>À PROPOS DE NOTRE ENTREPRISE</h2>
+                <p>
+                    Nous proposons une large gamme de PC professionnels, adaptés à tous les besoins : travail, gaming, création de contenu et plus encore.  
+                    Nos solutions informatiques sont conçues pour offrir des performances optimales et une fiabilité à long terme.  
+                    Faites confiance à notre expertise pour équiper votre entreprise avec les meilleurs outils technologiques.
+                </p>
+            </div>
+            <img src="~/images/pc6.jpg" alt="Équipe" class="about-image" />
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer border-top text-muted py-3">
+        <div class="container">
+            &copy; 2025 - AppWeb
+        </div>
+    </footer>
+
+
+
+  
+
+</body>
+</html>

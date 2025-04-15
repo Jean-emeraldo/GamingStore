@@ -1,0 +1,87 @@
+@model List<GamingStore.Models.Product>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Liste des produits</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="@Url.Action("NewPage", "Product")" class="navbar-brand">
+            <i class="fas fa-home" style="margin-right: 5px;"></i> Home
+        </a>
+        <ul class="navbar-menu">
+            <li>
+                <a href="@Url.Action("Apropos", "Product")">
+                    <i class="fas fa-info-circle" style="margin-right: 5px;"></i> À propos
+                </a>
+            </li>
+            <li>
+                <a href="@Url.Action("Index", "Product")">
+                    <i class="fas fa-box-open" style="margin-right: 5px;"></i> Produits
+                </a>
+            </li>
+        </ul>
+        <a href="@Url.Action("Create", "Product")" class="btn btn-add">
+            <i class="fas fa-plus-circle" style="margin-right: 5px;"></i> Ajouter un produit
+        </a>
+    </div>
+</nav>
+
+<main>
+    <div class="container">
+        <h1>Liste des produits</h1>
+
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success">@TempData["Success"]</div>
+        }
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger">@TempData["Error"]</div>
+        }
+
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Image</th>
+                    <th>Prix</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in Model)
+                {
+                    <tr>
+                        <td>@product.Name</td>
+                        <td><img src="@product.ImageUrl" alt="@product.Name" width="100" /></td>
+                        <td>@product.Price.ToString("C")</td>
+                        <td>@product.Description</td>
+                        <td>
+                            <a href="@Url.Action("Buy", "Product", new { id = product.Id })" class="btn btn-buy">Acheter</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<footer class="footer border-top text-muted py-3">
+    <div class="container">
+        &copy; 2025 - AppWeb - <a href="@Url.Action("Privacy", "Home")">Privacy</a>
+    </div>
+</footer>
+
+</body>
+</html>
