@@ -1,36 +1,26 @@
-## Fichiers spécifiques à .NET
+# Fichiers et dossiers .NET
 bin/
 obj/
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
-*.vspx
-*.pdb
-
-## Configuration locale
-*.dbmdl
-*.bak
 *.log
-*.vspscc
-*.vssscc
+*.vs/
 
-## Fichiers générés
-Generated_Code/
+# Secrets & configs
+appsettings.Development.json
+appsettings.*.json
 
-## Visual Studio / VS Code
+# Node.js
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# Build
+wwwroot/
+
+# IDE / OS
 .vscode/
-.vs/
-
-## Fichiers secrets
-*.env
-secrets.json
-
-## Fichiers système
+*.DS_Store
 Thumbs.db
-ehthumbs.db
-Desktop.ini
-.DS_Store
-
-## Dossiers à ignorer manuellement
-wwwroot/images/MyPortofolio/
