@@ -2,10 +2,10 @@ using Microsoft.AspNetCore.Mvc;
 using GamingStore.Data;
 using GamingStore.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 
 namespace GamingStore.Controllers
 {
@@ -28,9 +28,12 @@ namespace GamingStore.Controllers
 
         public IActionResult Apropos() => View();
 
-        public IActionResult Create()
+        public IActionResult Create() => View();
+
+        public async Task<IActionResult> Admin()
         {
-            return View();
+            var products = await _context.Products.ToListAsync();
+            return View(products);
         }
 
         [HttpPost]
@@ -46,6 +49,15 @@ namespace GamingStore.Controllers
             if (imageFile == null || imageFile.Length == 0)
             {
                 TempData["Error"] = "Veuillez sélectionner une image.";
+                return View(product);
+            }
+
+            var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
+            var fileExtension = Path.GetExtension(imageFile.FileName).ToLower();
+
+            if (!allowedExtensions.Contains(fileExtension))
+            {
+                TempData["Error"] = "Le fichier n'est pas une image valide.";
                 return View(product);
             }
 
@@ -81,6 +93,7 @@ namespace GamingStore.Controllers
                 TempData["Error"] = "Produit introuvable.";
                 return RedirectToAction("Index");
             }
+
             return View(product);
         }
 
@@ -112,6 +125,24 @@ namespace GamingStore.Controllers
 
             TempData["Error"] = "Compte ou mot de passe incorrect.";
             return View("Buy", product);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var product = await _context.Products.FindAsync(id);
+            if (product == null)
+            {
+                TempData["Error"] = "Produit introuvable.";
+                return RedirectToAction("Index");
+            }
+
+            _context.Products.Remove(product);
+            await _context.SaveChangesAsync();
+
+            TempData["Success"] = "Produit supprimé avec succès.";
+            return RedirectToAction("Index");
         }
 
         private Product? GetProductById(int id)

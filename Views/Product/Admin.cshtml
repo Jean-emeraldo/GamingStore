@@ -1,0 +1,202 @@
+@model List<GamingStore.Models.Product>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Admin - Gestion des produits</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .btn {
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .btn-toggle {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        .btn-toggle:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-delete {
+            background-color: #dc3545;
+            color: white;
+            text-align: center;
+        }
+
+        .btn-delete:hover {
+            background-color: #c82333;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #f8f9fa;
+        }
+
+        table td img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .alert {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .alert-success {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .alert-danger {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-menu {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar-menu li {
+            display: inline;
+        }
+
+        .btn-add {
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+
+        .btn-add:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="@Url.Action("NewPage", "Product")" class="navbar-brand">
+            <i class="fas fa-home" style="margin-right: 5px;"></i> Home
+        </a>
+        <ul class="navbar-menu">
+            <li>
+                <a href="@Url.Action("Apropos", "Product")">
+                    <i class="fas fa-info-circle" style="margin-right: 5px;"></i> À propos
+                </a>
+            </li>
+            <li>
+                <a href="@Url.Action("Index", "Product")">
+                    <i class="fas fa-box-open" style="margin-right: 5px;"></i> Produits
+                </a>
+            </li>
+        </ul>
+        <a href="@Url.Action("Create", "Product")" class="btn btn-add">
+            <i class="fas fa-plus-circle" style="margin-right: 5px;"></i> Ajouter un produit
+        </a>
+    </div>
+</nav>
+
+<main>
+    <div class="container">
+        <h1>Panneau d'administration</h1>
+
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success">@TempData["Success"]</div>
+        }
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger">@TempData["Error"]</div>
+        }
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Image</th>
+                    <th>Prix</th>
+                    <th>Description</th>
+                    <th>Statut</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in Model)
+                {
+                    <tr>
+                        <td>@product.Name</td>
+                        <td><img src="@product.ImageUrl" alt="@product.Name" /></td>
+                        <td>@product.Price.ToString("C")</td>
+                        <td>@product.Description</td>
+                        <td>@(product.IsActive ? "Actif" : "Inactif")</td>
+                        <td>
+                            <div class="btn-group">
+                                <a href="@Url.Action("Index", "Product", new { id = product.Id })" class="btn btn-toggle">
+                                    @(product.IsActive ? "Désactiver" : "Activer")
+                                </a>
+                                <form action="@Url.Action("Delete", "Product", new { id = product.Id })" method="post" style="display:inline;">
+                                    @Html.AntiForgeryToken()
+                                    <button type="submit" class="btn btn-delete" onclick="return confirm('Voulez-vous vraiment supprimer ce produit ?');">
+                                        Supprimer
+                                    </button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<footer class="footer border-top text-muted py-3">
+    <div class="container">
+        &copy; 2025 - AppWeb - <a href="@Url.Action("Privacy", "Home")">Privacy</a>
+    </div>
+</footer>
+
+</body>
+</html>

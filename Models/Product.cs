@@ -18,6 +18,8 @@ namespace GamingStore.Models
         public string Description { get; set; } = string.Empty;
 
         [Display(Name = "Image du produit")]
-        public string? ImageUrl { get; set; } 
+        public string? ImageUrl { get; set; }
+
+        public bool IsActive { get; set; } = true;
     }
 }

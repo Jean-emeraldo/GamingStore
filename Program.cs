@@ -4,22 +4,27 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using GamingStore.Data;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+using Microsoft.AspNetCore.Http;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Ajouter les services MVC
 builder.Services.AddControllersWithViews();
 
-// Connexion à la base de données MySQL
 var connectionString = "Server=localhost;Port=3306;Database=AppWebDB;User=root;Password=;";
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 36))));
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
 var app = builder.Build();
 
-// Pipeline HTTP
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -29,19 +34,19 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+app.UseSession();
+app.UseAuthorization();
 
-// Initialisation de la base de données au démarrage
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     var context = services.GetRequiredService<ApplicationDbContext>();
-    context.Database.Migrate(); // Mise à jour de la base
-    DbInitializer.Initialize(context); // Ajout de données de test, si besoin
+    context.Database.Migrate();
+    DbInitializer.Initialize(context);
 }
 
-// Configuration des routes
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Product}/{action=NewPage}/{id?}");
+    pattern: "{controller=Account}/{action=Login}/{id?}");
 
 app.Run();
