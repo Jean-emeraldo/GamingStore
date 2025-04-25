@@ -1,7 +1,7 @@
 @model GamingStore.Models.LoginViewModel
 
 
-<h2>Connexion</h2>
+
 
 @if (TempData["Error"] != null)
 {
@@ -10,28 +10,33 @@
     </div>
 }
 
-<form asp-action="Login" method="post">
-    <div>
-        <label>Nom ou Gmail :</label>
-        <input asp-for="EmailOrName" required />
-    </div>
-    <div>
-        <label>Mot de passe :</label>
-        <input asp-for="Password" type="password" required />
-    </div>
-    <div>
-        <button type="submit">Se connecter</button>
-        <a href="@Url.Action("Register", "Account")">Créer un compte</a>
-    </div>
-</form>
+<div class="container">
+    <form asp-action="Login" method="post">
+        <div class="form-group">
+            <label for="emailOrName">Nom ou Gmail :</label>
+            <input id="emailOrName" asp-for="EmailOrName" required />
+        </div>
+        <div class="form-group">
+            <label for="password">Mot de passe :</label>
+            <input id="password" asp-for="Password" type="password" required />
+        </div>
+        <div class="form-group">
+            <button type="submit">Se connecter</button>
+            
+        </div>
+    </form>
+
+</div>
 
 <style>
-.error-message {
-    color: red;
-    font-weight: bold;
-    margin-bottom: 20px;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-   
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f7fc;
@@ -40,12 +45,17 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding: 20px;
 }
 
-h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
 }
 
 form {
@@ -55,9 +65,10 @@ form {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
+    flex: 1;
 }
 
-div {
+.form-group {
     margin-bottom: 20px;
 }
 

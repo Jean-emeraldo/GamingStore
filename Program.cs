@@ -47,6 +47,6 @@ using (var scope = app.Services.CreateScope())
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Account}/{action=Login}/{id?}");
+    pattern: "{controller=Product}/{action=NewPage}/{id?}");
 
 app.Run();
