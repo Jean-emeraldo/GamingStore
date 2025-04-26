@@ -27,10 +27,7 @@
     </form>
 
 </div>
-
 <style>
-
-
 * {
     margin: 0;
     padding: 0;
@@ -39,7 +36,8 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f7fc;
+    background: rgba(20, 40, 60, 0.7);
+    color: #e0e0e0; /* texte clair */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,10 +57,10 @@ body {
 }
 
 form {
-    background-color: #fff;
+    background-color: #1e1e1e; /* fond du formulaire */
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05); /* ombre légère claire */
     width: 100%;
     max-width: 400px;
     flex: 1;
@@ -76,27 +74,29 @@ label {
     display: block;
     font-size: 1rem;
     margin-bottom: 5px;
-    color: #555;
+    color: #cccccc; /* couleur de label adoucie */
 }
 
 input {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
-    border: 1px solid #ddd;
+    background-color: #2a2a2a; /* champ sombre */
+    color: #f0f0f0; /* texte clair */
+    border: 1px solid #333;
     border-radius: 5px;
     outline: none;
     transition: border-color 0.3s;
 }
 
 input:focus {
-    border-color: #007bff;
+    border-color: #1e90ff; /* bleu un peu plus doux */
 }
 
 button {
     width: 100%;
     padding: 12px;
-    background-color: #007bff;
+    background-color: #1e90ff; /* bouton bleu lumineux */
     color: white;
     font-size: 1rem;
     border: none;
@@ -106,14 +106,14 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #0066cc;
 }
 
 a {
     display: block;
     text-align: center;
     margin-top: 10px;
-    color: #007bff;
+    color: #66b2ff; 
     text-decoration: none;
     font-size: 0.9rem;
 }
@@ -121,5 +121,5 @@ a {
 a:hover {
     text-decoration: underline;
 }
-
 </style>
+

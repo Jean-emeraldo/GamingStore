@@ -2,142 +2,283 @@
     Layout = null;
 }
 
+
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="~/css/site2.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ 
+    <title>Document</title>
+    <style>
+      /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    <title>Vente de PC Professionnels</title>
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
 
-    
+body {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background-color: #0d1117; /* Fond très sombre */
+  color: #c9d1d9; /* Texte clair */
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #161b22;
+  padding: 15px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar-brand {
+  color: #ffffff;
+  font-size: 28px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #00bcd4;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.navbar-menu li {
+  margin-left: 20px;
+}
+
+.navbar-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  background-color: #21262d;
+  color: #00bcd4;
+}
+
+/* HERO */
+.about-hero {
+  background: rgba(20, 40, 60, 0.7);
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+.about-hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.about-hero-content p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  padding: 60px 20px;
+  background-color: #161b22;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  padding: 10px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.about-text p {
+  font-size: 1.125rem;
+  color: #8b949e;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.02);
+}
+
+/* VALUES SECTION */
+.about-values {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #0d1117;
+}
+
+.about-values h2 {
+  font-size: 2.25rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.values-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.value {
+  background: #161b22;
+  padding: 30px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
+}
+
+.value i {
+  font-size: 2.5rem;
+  color: #00bcd4;
+  margin-bottom: 15px;
+}
+
+.value h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.value p {
+  font-size: 1rem;
+  color: #8b949e;
+}
+
+/* FOOTER */
+.footer {
+  padding: 20px 0;
+  text-align: center;
+  background: #161b22;
+  color: #8b949e;
+}
+
+    </style>
+
 </head>
-
 <body>
 
-    <!-- Navbar -->
 <nav class="navbar">
     <div class="navbar-container">
-
-        <!-- Lien Home avec icône -->
         <a href="@Url.Action("NewPage", "Product")" class="navbar-brand">
-            <i class="fas fa-home" style="margin-right: 5px;"></i> Home
+            <i class="fi fi-sr-home"></i> Home
         </a>
-
-        <!-- Menu -->
         <ul class="navbar-menu">
-            <li>
-                <a href="@Url.Action("Apropos", "Product")">
-                    <i class="fas fa-info-circle" style="margin-right: 5px;"></i> À propos
-                </a>
-            </li>
-            <li>
-                <a href="@Url.Action("Index", "Product")">
-                    <i class="fas fa-box-open" style="margin-right: 5px;"></i> Produits
-                </a>
-            </li>
+            <li><a href="@Url.Action("Apropos", "Product")"><i class="fas fa-info-circle"></i> À propos</a></li>
+            
         </ul>
-
     </div>
 </nav>
 
-
-    <section class="about">
-        <div class="about-content">
-            <div class="about-text">
-                <h2>À PROPOS DE NOTRE ENTREPRISE</h2>
-                <p>
-                    Nous proposons une large gamme de PC professionnels, adaptés à tous les besoins : travail, gaming, création de contenu et plus encore.  
-                    Nos solutions informatiques sont conçues pour offrir des performances optimales et une fiabilité à long terme.  
-                    Faites confiance à notre expertise pour équiper votre entreprise avec les meilleurs outils technologiques.
-                </p>
-            </div>
-            <img src="~/images/pc6.jpg" alt="Équipe" class="about-image" />
-        </div>
-    </section>
- 
-
-
-    <section class="services">
-        <h2>NOS SERVICES</h2>
-        <div class="service-list">
-            <div class="service-item">
-                <img src="~/images/pc3.jpg" alt="Professionnels" />
-                <h3>Pour les professionnels</h3>
-                <p>Des solutions de pointe pour répondre aux besoins des entreprises en matière de performance informatique.</p>
-            </div>
-            <div class="service-item">
-                <img src="~/images/pc3.jpg" alt="Jeux et performance" />
-                <h3>Pour le gaming et la performance</h3>
-                <p>Des configurations puissantes pour une expérience de jeu optimale et un multitâche sans limite.</p>
-            </div>
-            <div class="service-item">
-                <img src="~/images/pc3.jpg" alt="Startups et PME" />
-                <h3>Pour les startups et PME</h3>
-                <p>Des solutions sur mesure adaptées aux petites et moyennes entreprises pour booster la productivité.</p>
-            </div>
-            <div class="service-item">
-                <img src="~/images/pc3.jpg" alt="Créateurs de contenu" />
-                <h3>Pour les créateurs de contenu</h3>
-                <p>Des PC optimisés pour le montage vidéo, la création graphique et le streaming.</p>
-            </div>
-        </div>
-    </section>
-
-
-
-
-    <section class="trusted">
-        <p>Notre partenaires  </p>
-    <div class="partenaires">
-    <i class="fab fa-google" title="Partenaire 1" style="font-size: 32px; margin-right: 10px;"></i>
-    <i class="fab fa-facebook" title="Partenaire 2" style="font-size: 32px; margin-right: 10px;"></i>
-    <i class="fab fa-instagram" title="Partenaire 3" style="font-size: 32px; margin-right: 10px;"></i>
-    <i class="fab fa-twitter" title="Partenaire 4" style="font-size: 32px; margin-right: 10px;"></i>
+<section class="about-hero">
+    <div class="about-hero-content">
+        <h1>À propos de GamerZone</h1>
+        <p>Spécialistes des PC Gamer performants, nous équipons les passionnés et les compétiteurs du monde entier.</p>
     </div>
+</section>
 
-    </section>
-
-
-    <section class="hero">
-        <div class="hero-carousel">
-            <img src="~/images/pc1.jpg" alt="PC Professionnel 1" class="hero-image"/>
-            <img src="~/images/pc2.jpg" alt="PC Professionnel 2" class="hero-image"/>
-            <img src="~/images/pc3.jpg" alt="PC Professionnel 3" class="hero-image"/>
-            <img src="~/images/pc4.jpg" alt="PC Professionnel 4" class="hero-image"/>
+<section class="about-section">
+    <div class="about-container">
+        <div class="about-text">
+            <h2>Notre Mission</h2>
+            <p>
+                Chez GamerZone, nous croyons que chaque joueur mérite une machine adaptée à ses ambitions.
+                Notre mission est de fournir des PC Gamer fiables, puissants et abordables, en mettant l'accent sur la qualité et la performance.
+            </p>
         </div>
-    </section>
-
- 
-    <section class="about">
-        <div class="about-content">
-            <div class="about-text">
-                <h2>À PROPOS DE NOTRE ENTREPRISE</h2>
-                <p>
-                    Nous proposons une large gamme de PC professionnels, adaptés à tous les besoins : travail, gaming, création de contenu et plus encore.  
-                    Nos solutions informatiques sont conçues pour offrir des performances optimales et une fiabilité à long terme.  
-                    Faites confiance à notre expertise pour équiper votre entreprise avec les meilleurs outils technologiques.
-                </p>
-            </div>
-            <img src="~/images/pc6.jpg" alt="Équipe" class="about-image" />
+        <div class="about-image">
+            <img src="~/images/14.jpeg" alt="Notre service PC Gamer" />
         </div>
-    </section>
+    </div>
+</section>
 
-
-    <!-- Footer -->
-    <footer class="footer border-top text-muted py-3">
-        <div class="container">
-            &copy; 2025 - AppWeb
+<section class="about-values">
+    <h2>Pourquoi nous choisir ?</h2>
+    <div class="values-grid">
+        <div class="value">
+            <i class="fas fa-bolt"></i>
+            <h4>Performance maximale</h4>
+            <p>Des composants de dernière génération pour une expérience de jeu fluide en haute résolution.</p>
         </div>
-    </footer>
+        <div class="value">
+            <i class="fas fa-cogs"></i>
+            <h4>Assemblage expert</h4>
+            <p>Chaque PC est assemblé et testé par nos techniciens passionnés de gaming.</p>
+        </div>
+        <div class="value">
+            <i class="fas fa-shield-alt"></i>
+            <h4>Garantie & support</h4>
+            <p>Un service client dédié, avec des garanties sur tous nos produits.</p>
+        </div>
+    </div>
+</section>
 
 
-
-  
-
+<footer class="footer">
+    <div class="container">&copy; 2025 - GamerZone</div>
+</footer>
+    
 </body>
 </html>

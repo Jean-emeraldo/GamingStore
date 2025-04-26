@@ -5,388 +5,176 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/site1.css" />
-    <script src="../js/carousel.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vente de PC Professionnels</title>
+    <link rel="stylesheet" href="../css/site1.css">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>Vente de PC Professionnels</title>
- 
-    <style>
-       :root {
-    --primary-color: #007BFF;
-    --secondary-color: #0056b3;
-    --text-color: #333;
-    --light-text-color: #666;
-    --background-color: #fff;
-    --border-color: #ddd;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-    --font-family: 'Arial', sans-serif;
-}
+    <script src="../js/carousel.js" defer></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        let currentIndex = 0;
+        const items = document.querySelectorAll('.carousel-item');
+        const carouselInner = document.querySelector('.carousel-inner');
+        const totalItems = items.length;
+        const intervalTime = 3000; 
 
-body {
-    margin: 0;
-    font-family: var(--font-family);
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
+        if (totalItems > 0) {
+            
+            carouselInner.style.width = `${totalItems * 100}%`;
+            carouselInner.style.display = 'flex';
+            carouselInner.style.transition = 'transform 0.5s ease-in-out';
 
-.hero-section {
-    background-image: url('../images/pc7.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+            items.forEach(item => {
+                item.style.width = `${100 / totalItems}%`;
+                item.style.flexShrink = '0';
+            });
 
-.hero-section .content {
-    max-width: 800px;
-    margin: 0 auto;
-}
+            function changeSlide(n = 1) {
+                currentIndex = (currentIndex + n + totalItems) % totalItems;
+                carouselInner.style.transform = `translateX(-${currentIndex * (100 / totalItems)}%)`;
+            }
 
-.hero-section h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
-    margin-bottom: 20px;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.hero-section p {
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
-    margin-bottom: 30px;
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-.hero-section .cta-btn {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.hero-section .cta-btn:hover {
-    background-color: var(--secondary-color);
-    transform: scale(1.05);
-}
+            
+            setInterval(() => {
+                changeSlide(1);
+            }, intervalTime);
+        }
+    });
+    </script>
 
 
-.strategy-section {
-    background-color: var(--background-color);
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.strategy-section h2 {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    margin-bottom: 20px;
-    color: var(--text-color);
-    animation: fadeIn 2s ease-in-out;
-}
-
-.strategy-section p {
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
-    margin-bottom: 40px;
-    color: var(--light-text-color);
-}
-
-.strategy-section .steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    justify-content: center;
-}
-
-.strategy-section .step {
-    padding: 20px;
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px var(--shadow-color);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.strategy-section .step:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px var(--shadow-color);
-}
-
-.strategy-section .step p {
-    font-size: 1rem;
-    color: var(--light-text-color);
-    margin-bottom: 10px;
-}
-
-.strategy-section .step h3 {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-}
-
-    .hero-section p {
-        font-size: 1rem;
-    }
-
-    .strategy-section h2 {
-        font-size: 2rem;
-    }
-
-    .strategy-section p {
-        font-size: 1rem;
-    }
-
-    .strategy-section .step {
-        min-width: 100%;
-        max-width: 100%;
-    }
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: var(--background-color);
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    box-shadow: 0 4px 8px var(--shadow-color);
-    min-width: 150px;
-    z-index: 1000;
-}
-
-.dropdown-menu li {
-    list-style: none;
-}
-
-.dropdown-menu a {
-    display: block;
-    padding: 10px 15px;
-    color: var(--text-color);
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.dropdown-menu a:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-
-    </style>
 </head>
-
 <body>
 
-    <!-- Navbar -->
 <nav class="navbar">
     <div class="navbar-container">
-       <a href="@Url.Action("NewPage", "Product")" class="navbar-brand">
-           <i class="fi fi-sr-home"></i> Home
-       </a>
-
-<ul class="navbar-menu">
-    <li>
-        <a href="@Url.Action("Apropos", "Product")">
-            <i class="fas fa-info-circle" style="margin-right: 5px;"></i> À propos
+        <a href="@Url.Action("NewPage", "Product")" class="navbar-brand">
+            <i class="fi fi-sr-home"></i> Home
         </a>
-    </li>
-    
-    <li class="dropdown" id="userDropdown">
-        <a href="#" class="dropdown-toggle">
-            <i class="fas fa-user" style="margin-right: 5px;"></i> Utilisateur
-        </a>
-        <ul class="dropdown-menu">
-            <li><a href="@Url.Action("Login", "Account")">Admin</a></li>       
-            <li><a href="@Url.Action("Index", "Product")">Client</a></li>
-            <li><a href="@Url.Action("Create", "Product")">Vendeur</a></li>
+        <ul class="navbar-menu">
+            <li><a href="@Url.Action("Apropos", "Product")"><i class="fas fa-info-circle"></i> À propos</a></li>
+            <li class="dropdown" id="userDropdown">
+                <a href="#" class="dropdown-toggle"><i class="fas fa-user"></i> Utilisateur</a>
+                <ul class="dropdown-menu">
+                    <li><a href="@Url.Action("Login", "Account")">Admin</a></li>
+                    <li><a href="@Url.Action("Index", "Product")">Client</a></li>
+                    <li><a href="@Url.Action("Create", "Product")">Vendeur</a></li>
+                </ul>
+            </li>
+            <li><a href="#" id="deconnecter"><i class="fas fa-sign-out-alt"></i> Déconnecter</a></li>
         </ul>
-    </li>
-
-    <li class="nav-item">
-        <a class="nav-link" href="#" id="deconnecter">
-            <i class="fas fa-sign-out-alt" style="margin-right: 5px;"></i> Déconnecter
-        </a>
-    </li>
-</ul>
-
-       
     </div>
 </nav>
-
-
-
-<section class="hero-section">
-    <div class="content">
-        <h1>WELCOME</h1>
-        <p>Des solutions de pointe pour répondre aux besoins des entreprises en matière de performance informatique.</p>
-        <button class="cta-btn">PC POUR LES PROFESSIONNELS</button>
+<section class="hero">
+    <div class="hero-content">
+        <h1>
+            <span>Bienvenue   sur  Gamer  Zone</span>
+            <span>Explorez nos PC surpuissants</span>
+            <span>Prêt  pour  la compétition ?</span>
+            <span>Rejoignez   la    communauté </span>
+        </h1>
+        <p>La plateforme ultime pour acheter des PC Gamer puissants, performants et prêts pour la compétition.</p>
+        <a href="#" class="btn">Découvrir nos PC</a>
     </div>
 </section>
 
 
-<section class="strategy-section">
-    <h2>Nos Offres pour Tous les Profils :</h2>
-    <p>Choisissez la configuration adaptée à vos besoins</p>
-    <div class="steps">
-        <div class="step">
-            <p>Des configurations puissantes pour une expérience de jeu optimale et un multitâche sans limite.</p>
-            <h3>JEUX ET PERFORMANCE</h3>
+
+<section class="categories">
+    <h2>Catégories de PC Gamer</h2>
+    <div class="category-grid">
+        <div class="category">
+            <img src="../images/a.jpg" alt="PC Gamer Portable">
+            <h3>PC Gamer Portable</h3>
         </div>
-        <div class="step">
-            <p>Des solutions sur mesure adaptées aux petites et moyennes entreprises pour booster la productivité.</p>
-            <h3>STARTUPS ET PME</h3>
+        <div class="category">
+            <img src="../images/pc1.jpg" alt="PC Gamer Fixe">
+            <h3>PC Gamer Fixe</h3>
         </div>
-        <div class="step">
-            <p>Des PC optimisés pour le montage vidéo, la création graphique et le streaming.</p>
-            <h3>CRÉATEURS DE CONTENU</h3>
+        <div class="category">
+            <img src="../images/pc2.jpg" alt="Accessoires Gaming">
+            <h3>Accessoires Gaming</h3>
         </div>
-        <div class="step">
-            <p>Nous proposons une large gamme de PC professionnels, adaptés à tous les besoins : travail, gaming, création de contenu et plus encore.</p>
-            <h3>PC PROFESSIONNELS</h3>
+    </div>
+    <a href="#" class="btn-see-all">Voir tous les modèles</a>
+</section>
+
+<section class="carousel-section">
+    <h2>Nos Meilleures Offres</h2>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../images/1.jpeg" alt="Offre 1">
+                <div class="carousel-caption">
+                    <h3>Offre Spéciale 1</h3>
+                    <p>Description de l'offre 1.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../images/2.jpeg" alt="Offre 2">
+                <div class="carousel-caption">
+                    <h3>Offre Spéciale 2</h3>
+                    <p>Description de l'offre 2.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../images/14.jpeg" alt="Offre 3">
+                <div class="carousel-caption">
+                    <h3>Offre Spéciale 3</h3>
+                    <p>Description de l'offre 3.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="carousel-control next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+</section>
+
+
+<section class="popular-products">
+    <h2>Nos PC Gamer les plus populaires</h2>
+    <div class="products-grid">
+        <div class="product"><img src="../images/11.jpeg" alt="PC Gamer RTX 4060"><h4>PC Gamer RTX 4060</h4><p>1 299,99 €</p></div>
+        <div class="product"><img src="../images/12.jpeg" alt="Setup complet RGB"><h4>Setup complet RGB</h4><p>999,99 €</p></div>
+        <div class="product"><img src="../images/2.jpeg" alt="PC Gamer Ryzen 7"><h4>PC Gamer Ryzen 7</h4><p>1 499,99 €</p></div>
+        <div class="product"><img src="../images/6.jpeg" alt="Écran Gaming 165Hz"><h4>Écran Gaming 165Hz</h4><p>229,99 €</p></div>
+        <div class="product"><img src="../images/7.jpeg" alt="Clavier Mécanique RGB"><h4>Clavier Mécanique RGB</h4><p>89,99 €</p></div>
+        <div class="product"><img src="../images/8.jpeg" alt="Souris Gaming Sans Fil"><h4>Souris Gaming Sans Fil</h4><p>59,99 €</p></div>
+        <div class="product"><img src="../images/9.jpeg" alt="Tapis RGB XXL"><h4>Tapis RGB XXL</h4><p>29,99 €</p></div>
+        <div class="product"><img src="../images/10.jpeg" alt="Boîtier PC RGB"><h4>Boîtier PC RGB</h4><p>109,99 €</p></div>
+    </div>
+</section>
+
+<section class="testimonials">
+    <h2>Avis des joueurs</h2>
+    <div class="testimonial-grid">
+        <div class="testimonial">
+            <p>“J’ai monté mon PC gamer ici, tout fonctionne parfaitement en ultra !”</p>
+            <strong>- Alex, streamer</strong>
+        </div>
+        <div class="testimonial">
+            <p>“Les meilleurs prix et une livraison rapide, je recommande à 100%.”</p>
+            <strong>- Sarah, gameuse</strong>
         </div>
     </div>
 </section>
 
-    <section class="about">
-        <div class="about-content">
-            <div class="about-text">
-                <h2>À PROPOS </h2>
-                <p>
-                    Nous proposons une large gamme de PC professionnels, adaptés à tous les besoins : travail, gaming, création de contenu et plus encore.  
-                    Nos solutions informatiques sont conçues pour offrir des performances optimales et une fiabilité à long terme.  
-                    Faites confiance à notre expertise pour équiper votre entreprise avec les meilleurs outils technologiques.
-                </p>
-            </div>
-            <img src="~/images/pc6.jpg" alt="Équipe" class="about-image" />
-        </div>
-    </section>
- 
-<section class="services">
-   
-    <div class="service-list">
-        
-        <div class="service-item">
-            <img src="~/images/pc3.jpg" alt="Professionnels" width="100%" height="100%"/>
-            <h3>Pour les professionnels</h3>
-            <p>Des solutions de pointe pour répondre aux besoins des entreprises en matière de performance informatique.</p>
-            <div class="feedback-container">
-                <button class="feedback-btn like-btn" data-service="1" data-vote="like">
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
-                        <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/>
-                    </svg>
-                    <span class="count">0</span>
-                </button>
-                <button class="feedback-btn dislike-btn" data-service="1" data-vote="dislike">
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
-                        <path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.58-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"/>
-                    </svg>
-                    <span class="count">0</span>
-                </button>
-            </div>
-        </div>
 
-        
-        <div class="service-item">
-            <img src="~/images/pc3.jpg" alt="Jeux et performance" />
-            <h3>Pour le gaming et la performance</h3>
-            <p>Des configurations puissantes pour une expérience de jeu optimale et un multitâche sans limite.</p>
-            <div class="feedback-container">
-                <button class="feedback-btn like-btn" data-service="2" data-vote="like">
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
-                        <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/>
-                    </svg>
-                    <span class="count">0</span>
-                </button>
-                <button class="feedback-btn dislike-btn" data-service="2" data-vote="dislike">
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
-                        <path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.58-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"/>
-                    </svg>
-                    <span class="count">0</span>
-                </button>
-            </div>
-        </div>
+<footer class="footer">
+    <div class="container">&copy; 2025 - GamerZone</div>
+</footer>
 
-        <!-- Service Item 3 -->
-        <div class="service-item">
-            <img src="~/images/pc3.jpg" alt="Startups et PME" />
-            <h3>Pour les startups et PME</h3>
-            <p>Des solutions sur mesure adaptées aux petites et moyennes entreprises pour booster la productivité.</p>
-            <div class="feedback-container">
-                <button class="feedback-btn like-btn" data-service="3" data-vote="like">
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
-                        <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/>
-                    </svg>
-                    <span class="count">0</span>
-                </button>
-                <button class="feedback-btn dislike-btn" data-service="3" data-vote="dislike">
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
-                        <path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.58-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"/>
-                    </svg>
-                    <span class="count">0</span>
-                </button>
-            </div>
-        </div>
-
-        <div class="service-item">
-            <img src="~/images/pc3.jpg" alt="Créateurs de contenu" />
-            <h3>Pour les créateurs de contenu</h3>
-            <p>Des PC optimisés pour le montage vidéo, la création graphique et le streaming.</p>
-            <div class="feedback-container">
-                <button class="feedback-btn like-btn" data-service="4" data-vote="like">
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
-                        <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/>
-                    </svg>
-                    <span class="count">0</span>
-                </button>
-                <button class="feedback-btn dislike-btn" data-service="4" data-vote="dislike">
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
-                        <path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.58-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"/>
-                    </svg>
-                    <span class="count">0</span>
-                </button>
-            </div>
+<div id="logoutDialog" class="dialog-overlay">
+    <div class="dialog-box">
+        <h2>Voulez-vous vraiment quitter ce site ?</h2>
+        <div class="dialog-buttons">
+            <button id="confirmLogout" class="dialog-button confirm">Quitter</button>
+            <button id="cancelLogout" class="dialog-button cancel">Annuler</button>
         </div>
     </div>
-</section>
- 
+</div>
 
-
-    
-    <footer class="footer border-top text-muted py-3">
-        <div class="container">
-            &copy; 2025 - AppWeb
-        </div>
-    </footer>
-
-   
-    <div id="logoutDialog" class="dialog-overlay">
-        <div class="dialog-box">
-            <h2>Voulez-vous vraiment quitter ce site ?</h2>
-            <div class="dialog-buttons">
-                <button id="confirmLogout" class="dialog-button confirm">Quitter</button>
-                <button id="cancelLogout" class="dialog-button cancel">Annuler</button>
-            </div>
-        </div>
-    </div>
-    
 </body>
 </html>
